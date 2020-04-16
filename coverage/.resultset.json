@@ -837,17 +837,16 @@
   },
   "RSpec": {
     "coverage": {
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/models/user.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/models/user.rb": [
         1,
         null,
         null,
         1,
         null,
+        1,
+        1,
+        1,
         null,
-        1,
-        1,
-        1,
-        1,
         1,
         null,
         null,
@@ -893,8 +892,11 @@
         null,
         1,
         0,
+        null,
         0,
         0,
+        0,
+        null,
         null,
         0,
         0,
@@ -917,35 +919,35 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/admin_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/application_helper.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/password_resets_helper.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/password_resets_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/practice_helper.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/practice_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/questions_helper.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/questions_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/quiz_helper.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/quiz_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/selcat_helper.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/selcat_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/sessions_helper.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/sessions_helper.rb": [
         1,
         1,
         2,
@@ -994,11 +996,11 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/users_helper.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/admin_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/admin_controller.rb": [
         1,
         null,
         1,
@@ -1060,7 +1062,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/application_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -1088,7 +1090,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/home_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/home_controller.rb": [
         1,
         null,
         1,
@@ -1096,7 +1098,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/password_resets_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/password_resets_controller.rb": [
         1,
         null,
         null,
@@ -1110,6 +1112,7 @@
         null,
         1,
         null,
+        0,
         0,
         0,
         0,
@@ -1176,7 +1179,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/practice_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/practice_controller.rb": [
         1,
         null,
         null,
@@ -1195,7 +1198,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/questions_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/questions_controller.rb": [
         1,
         null,
         1,
@@ -1299,7 +1302,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/quiz_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/quiz_controller.rb": [
         1,
         null,
         1,
@@ -1360,7 +1363,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/selcat_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/selcat_controller.rb": [
         1,
         null,
         1,
@@ -1369,7 +1372,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/selquiz_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/selquiz_controller.rb": [
         1,
         null,
         1,
@@ -1379,7 +1382,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/sessions_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -1407,6 +1410,7 @@
         null,
         0,
         0,
+        null,
         null,
         null,
         0,
@@ -1430,12 +1434,12 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/users_controller.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/users_controller.rb": [
         1,
+        null,
+        null,
+        null,
         1,
-        null,
-        null,
-        null,
         null,
         1,
         0,
@@ -1488,6 +1492,7 @@
         3,
         6,
         3,
+        3,
         null,
         0,
         0,
@@ -1532,7 +1537,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/mailers/user_mailer.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/mailers/user_mailer.rb": [
         1,
         null,
         1,
@@ -1542,13 +1547,13 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/mailers/application_mailer.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/mailers/application_mailer.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/models/question_bank.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/models/question_bank.rb": [
         1,
         1,
         0,
@@ -1560,111 +1565,111 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/models/category_bank.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/models/category_bank.rb": [
         1,
         null
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/helpers/categories_helpers.rb": [
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/users/omniauth_callbacks_controller.rb": [
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/controllers/categories_controller.rb": [
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0
       ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/categories_controller.rb": [
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
+      "/home/shibin/Documents/TamuAcademics/software/project/code-coverage/PhD-Qual-Practice/app/helpers/categories_helpers.rb": [
         0,
         0
-      ],
-      "/home/ec2-user/environment/PhD-Qual-Practice/app/controllers/users/omniauth_callbacks_controller.rb": [
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        null
       ]
     },
-    "timestamp": 1585288271
+    "timestamp": 1587020045
   }
 }

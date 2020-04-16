@@ -157,7 +157,10 @@ RSpec.describe UsersController, type: :controller do
 #  end
 #
   it "should create new users without updated_at value, ensure that they exist even after old users are deleted " do
-    post :create, :user => { :name => "ABC", :email => "abc@tamu.edu", :password=> '123456', :password_confirmation=> '123456' }
+    user = { :name => "ABC", :email => "abc@tamu.edu", :password=> '123456', :password_confirmation=> '123456' }
+    allow(request.env['warden']).to receive(:authenticate!).and_return(user)
+    allow(controller).to receive(:current_user).and_return(user)
+    post :create, :user => user
    
     # all the created users exist
     expect(User.where(:name => "ABC")).to exist
