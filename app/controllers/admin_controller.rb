@@ -18,9 +18,8 @@ class AdminController < ApplicationController
 
   def show
     if params[:flag_] == "q"
-    	@question = QuestionBank.find(params[:id])
+      @question = QuestionBank.find(params[:id])
     	@question.update(reviewStatus: "Approved")
-
     	redirect_to action: "admin_questions"
     	
     elsif params[:flag_] == "u"
@@ -39,8 +38,8 @@ class AdminController < ApplicationController
     	flash[:destroy] = "Question-'#{@question.id}' deleted."
     	redirect_to admin_questions_path
     elsif (params[:flag] == "u") 
-	    @user = User.find(params[:id])
-	      if @user.id != current_user[:user_id]
+      @user = User.find(params[:id])
+	      if @user.id != current_user[:id]
 	         @user.destroy
     	     flash[:destroy] = "User/Admin-'#{@user.email}' deleted."
     	     redirect_to admin_index_path
