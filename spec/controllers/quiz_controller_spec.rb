@@ -23,6 +23,10 @@ RSpec.describe QuizController, type: :controller do
                     get :index, timervalue: '1445'
                     expect(flash[:notice]).to match("Invalid timer value. Timer value is too high.")
             end
+            it "test if parameter is empty" do
+                get :index
+                expect(flash[:notice]).to eq("Please enter timer value")
+            end
             
         end
     end
@@ -35,21 +39,42 @@ RSpec.describe QuizController, type: :controller do
             #end        
         #end
     #end
-end
- #index
-#  describe 'Index questions for Quiz' do
-#    let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question1', category: 'cat1', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
-#    let!(:question2) { FactoryBot.create(:question_bank, question: 'Test Question2', category: 'cat2', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '3')}
-#    let(:params) { {quizlimit: "All"} }
-#    it 'gets all questions' do
-#      get :index, quizlimit: "All"
-#      expect(assigns(:questions)).to include(question1,question2)
-#    end
-#    let(:params) { {quizlimit: 1} }
-#    it 'gets only given number of questions' do
-#        get :index, quizlimit: 1
-#        expect(assigns(:questions).count).to eq(1)
-#    end
-#  end
+    describe 'Index questions for Quiz' do
+        let!(:question1) { FactoryBot.create(:question_bank, question: 'Test Question1', reviewStatus: "Approved", category: 'cat1', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '2')}
+        let!(:question2) { FactoryBot.create(:question_bank, question: 'Test Question2', reviewStatus: "Approved", category: 'cat2', option1: '1', option2: '2', option3: '3', option4: '4', option5: '5', answer: '3')}
+        let(:params) { {quizlimit: "All"} }
+        it 'gets all questions' do
+            get :index, quizlimit: "All", timervalue: '100'
+            expect(assigns(:questions)).to include(question1,question2)
+        end
+        it 'missing quizlimit option' do
+            get :index, timervalue: '100'
+            expect(flash[:notice]).to eq("Select at least one option")
+        end
+        describe "Number of returned values" do
+            before(:each) do 
+                FactoryBot.create_list(:question_bank, 200, reviewStatus: "Approved")
+            end
+            it 'gets only given number of questions = 20' do
+                get :index, quizlimit: 1, timervalue: '100'
+                expect(assigns(:questions).count).to eq(20)
+            end
 
-#end
+            it 'gets only given number of questions = 35' do
+                get :index, quizlimit: 35, timervalue: '100'
+                expect(assigns(:questions).count).to eq(40)
+            end
+
+            it 'gets only given number of questions = 45' do
+                get :index, quizlimit: 45, timervalue: '100'
+                expect(assigns(:questions).count).to eq(60)
+            end
+
+            it 'gets only given number of questions = All' do
+                get :index, quizlimit: 101, timervalue: '100'
+                expect(assigns(:questions).count).to eq(202)
+            end
+        end
+    end
+
+end
