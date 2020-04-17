@@ -72,9 +72,9 @@
           .col-xs-4
             .next
               %button.btn.next{:onclick => "getNext()", :type => "button"} Next
-        .row 
           .col-xs-4.mx-auto
-            = link_to "Quit", selcat_path, class: "btn btn-lg btn-info" 
+            = link_to "Quit", selcat_path, class: "btn btn-lg btn-info"    
+           
       .row
         .col-xs-12.mx-auto
           %button.btn.btn-info#submitQuiz.hide{:type => "button",:disabled=>"disabled"} Submit
