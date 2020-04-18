@@ -49,5 +49,10 @@ RSpec.describe PasswordResetsController, type: :controller do
         end
     end  
 
+    describe "Update" do
+        it "Password can't be empty" do:
+        end
+    end
+
 
 end
