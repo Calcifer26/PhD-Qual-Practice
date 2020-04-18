@@ -40,7 +40,9 @@ Rails.application.configure do
   #Mailer action
   config.action_mailer.delivery_method = :test
   config.action_mailer.default_url_options = { :host => "test.yourhost.com" }
-
+  # Omni auth config
+  OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({:provider => 'twitter',:uid => '123545'
+    })
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
