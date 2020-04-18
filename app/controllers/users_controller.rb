@@ -11,11 +11,11 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    unless user_signed_in?
+    @user = User.find(params[:id])
+    if !user_signed_in?
       flash[:notice] = "You need to login to see this page"
       redirect_to login_url
     end
-    @user= current_user
   end
 
   # GET /users/new
@@ -25,6 +25,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user = User.find(params[:id])
   end
 
   # POST /users
@@ -66,8 +67,9 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    @user = User.find(params[:id])
     respond_to do |format|
-      if @user.update(user_params)
+      if ((@user.email == params[:user][:email]) || (!User.exists?(email: params[:user][:email]))) && @user.update(user_params)
         format.html { redirect_to root_url, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -80,7 +82,8 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy 
+    @user = User.find(params[:id])
+    User.destroy(@user.id)
     respond_to do |format|
       format.html { redirect_to admin_index_path, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
@@ -90,9 +93,9 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+    # def set_user
+    #   @user = User.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params

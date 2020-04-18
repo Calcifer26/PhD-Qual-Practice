@@ -11,5 +11,27 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe SessionsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  class DummyClass 
+    include SessionsHelper
+    def current_user
+      FactoryBot.create(:user, is_admin: true)
+    end
+  end
+  describe "is_admin test" do
+    it "curent user should return admin" do
+      # admin = FactoryBot.create(:user, is_admin: true)
+      expect(DummyClass.new.is_admin?()).to eq(true)
+    end
+  end
+
+  xdescribe "log_ut" do
+    it "logout should " do
+      dummy = DummyClass.new
+      allow().to receive(:sign_out).and_return(true)
+      expect(assigns(:current_user)).to eq(nil)
+      dummy.log_out
+    end
+  end
+
 end

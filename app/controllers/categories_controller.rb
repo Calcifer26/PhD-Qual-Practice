@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
     def index
         #@questions = QuestionBank.where(creator: session[:email])
         @all_categories = CategoryBank.all
-	    @user = User.all
+        @user = User.all
 	#redirect_to categories_path
     end
     
