@@ -47,12 +47,7 @@ RSpec.describe PasswordResetsController, type: :controller do
             expect(response).to redirect_to(login_path)
             expect(flash[:success]).to eq("Email sent with password reset instructions")
         end
-    end  
-
-    describe "Update" do
-        it "Password can't be empty" do:
-        end
     end
-
+    
 
 end
