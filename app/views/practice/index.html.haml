@@ -69,9 +69,13 @@
               %button.btn.previous{:disabled => "disabled", :onclick => "getPrevious()", :type => "button"} Previous
           .col-xs-4.mx-auto
             %button.btn.btn-primary#showAnswerBtn{:onclick => "showAnswer()", :type => "button"} Show Answer
+          .col-xs-4.mx-auto
+            = link_to "Quit", selcat_path, class: "btn btn-lg btn-primary"   
           .col-xs-4
             .next
               %button.btn.next{:onclick => "getNext()", :type => "button"} Next
+             
+           
       .row
         .col-xs-12.mx-auto
           %button.btn.btn-info#submitQuiz.hide{:type => "button",:disabled=>"disabled"} Submit
