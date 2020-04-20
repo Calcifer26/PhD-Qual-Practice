@@ -1,14 +1,5 @@
 /%p#sessionflash= session[:flash]
 .container
-- if flash[:notice]
-  .alert.alert-danger.alert-dismissible.fade.show{:role=>"alert"}
-    = flash[:notice]
-- if flash[:success]
-  .alert.alert-success.alert-dismissible.fade.show{:role=>"alert"}
-    = flash[:success]
-    
-- session[:flash] = nil
-.container
   - provide(:title, "Log in")
   .row.login-form
     = form_for(:session, url: login_path) do |f|
