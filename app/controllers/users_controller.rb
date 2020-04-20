@@ -53,8 +53,8 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         session[:name] = @user.name
         session[:email] = @user.email
-        flash[:notice] = 'Please verify your account.'
-        format.html { redirect_to root_url, flash: {warning: 'Please verify your account.'} }
+        flash[:notice] = 'Please verify your email.'
+        format.html { redirect_to root_url}
         #format.json { render :show, status: :created, location: @user }
         # sign_in(:user, @user)
       else
