@@ -9,6 +9,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       else
         # save the current omniauth info
         @user.save
+        @user.skip_confirmation!
+        # @user.confirm!
         session["devise.auth_data"] = request.env["omniauth.auth"]
         sign_in_and_redirect @user, :event => :authentication #this will throw if @user is not activated
       end
@@ -23,6 +25,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         set_flash_message(:notice, :success, :kind => "Google") if is_navigational_format?
       else
         # save the current omniauth info
+        @user.skip_confirmation!
         @user.save
         session["devise.auth_data"] = request.env["omniauth.auth"]
         sign_in_and_redirect @user, :event => :authentication #this will throw if @user is not activated

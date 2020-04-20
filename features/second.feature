@@ -6,8 +6,8 @@ I want to add/delete Flash Cards
 Background: Admin should be able to login
 
 Given the admin exists:
-|   name   |         email         | password | password_confirmation |
-|  satish  |   admin@cs.tamu.edu   |  foobar  |         foobar        |
+|   name   |         email         | password | password_confirmation | confirmed_at |
+|  satish  |   admin@cs.tamu.edu   |  foobar  |         foobar        |  2020-04-20 06:20:34.974867| 
 
 Given the following questions exist:
   | question  | option1 | option2 | option3 | option4 | option5 | answer |     category     |

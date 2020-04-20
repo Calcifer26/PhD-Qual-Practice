@@ -26,6 +26,13 @@ RSpec.describe SessionsController, type: :controller do
         expect(response).to redirect_to(login_url)
     end
 
+    it "On email verification not done should redirect login" do
+        new_user = FactoryBot.create(:user, confirmed_at: "", email: "newuser@test.com")
+        get :create, session: { email: new_user.email, password: new_user.password}
+        expect(flash[:notice]).to eq("Please verify your email")
+        expect(response).to redirect_to(root_url)
+    end
+
     it "On all correct should login successfully and redirect" do
         get :create, session: { email: @user_exist.email, password: @user_exist.password}
         expect(flash[:notice]).to eq(nil)
