@@ -316,6 +316,10 @@ function setActiveNav() {
     }
 }
 
+function quitQuiz(){
+    window.location.href = "/selquiz";
+}
+
 function positionFooter() {
     var footerHeight = 0,
         footerTop = 0,
