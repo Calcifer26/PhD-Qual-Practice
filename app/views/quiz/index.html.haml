@@ -71,9 +71,13 @@
           .col-xs-4
             .next
               %button.btn.next{:onclick => "getNext()", :type => "button"} Next
+           
       .row
         .col-xs-12.mx-auto
           %button.btn.btn-info#submitQuiz{:type => "button",:disabled=>"disabled"} Submit
+        .col-xs-12.mx-auto
+          = link_to "Quit", selquiz_index_path, class: "btn btn-lg btn-info"     
+            
           
 
 :javascript

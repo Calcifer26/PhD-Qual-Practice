@@ -42,7 +42,7 @@ RSpec.describe QuestionsController, type: :controller do
             image4: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f',\
             image5: 'image/upload/v1525047613/zevehwni8569078s0z77.png#c963266e73e33a30e7f295408b9b1451a70a002f'
             expect(flash[:success]).to match(/Question was successfully added/)
-            expect(response).to redirect_to(questions_path)
+            expect(response).to redirect_to(admin_questions_path)
         end
         
     end

@@ -11,7 +11,10 @@ RSpec.describe PracticeController, type: :controller do
       get :index, categories: {'cat1'=>"1"}
       expect(assigns(:questions)).not_to include(question2)
     end
-    it 'not all args are'
+    it 'if category missing should redirect to category' do
+      get :index 
+      expect(response).to redirect_to(selcat_path)
+    end
   end
   
 end
