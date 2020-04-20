@@ -89,6 +89,15 @@
               %a.nav-link{:href => login_path} Login
           
     %br/
+    .container
+    - if flash[:notice]
+      .alert.alert-danger.alert-dismissible.fade.show{:role=>"alert"}
+        = flash[:notice]
+    - if flash[:success]
+      .alert.alert-success.alert-dismissible.fade.show{:role=>"alert"}
+        = flash[:success]
+    - session[:flash] = nil
+
     = yield
     %br/
     %br/
