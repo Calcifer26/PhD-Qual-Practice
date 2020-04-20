@@ -25,6 +25,9 @@ module NavigationHelpers
     when /^Quiz Category\s?page$/
       '/selquiz'
       
+     when /^Pratice Category\s?page$/
+      '/selcat'
+      
     when /^the Forgot password\s?page$/
       '/password_resets/new'
 
