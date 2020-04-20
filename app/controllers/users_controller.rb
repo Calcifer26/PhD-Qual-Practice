@@ -53,9 +53,10 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         session[:name] = @user.name
         session[:email] = @user.email
-        format.html { redirect_to root_url, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-        sign_in(:user, @user)
+        flash[:notice] = 'Please verify your account.'
+        format.html { redirect_to root_url, flash: {warning: 'Please verify your account.'} }
+        #format.json { render :show, status: :created, location: @user }
+        # sign_in(:user, @user)
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
