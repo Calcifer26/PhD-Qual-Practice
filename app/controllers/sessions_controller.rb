@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
     # check whether user is confirmed.
     if !@user.confirmed?
       flash[:notice] = ("Please verify your email")
-      redirect_to root_url
+      return redirect_to root_url
     end
 
     if @user && @user.authenticate(params[:session][:password])
