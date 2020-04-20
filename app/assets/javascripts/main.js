@@ -316,6 +316,14 @@ function setActiveNav() {
     }
 }
 
+function quitQuiz(){
+    window.location.href = "/selquiz";
+}
+
+function quitPratcie(){
+    window.location.href = "/selcat";
+}
+
 function positionFooter() {
     var footerHeight = 0,
         footerTop = 0,
