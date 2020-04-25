@@ -8,6 +8,7 @@ var perQuesWeight = 1;
 var quizSummaryGenerated = false;
 var isQuizComplete = false;
 var interval = 0;
+var timeTaken = [];
 // this will called when document is ready
 
 
@@ -144,10 +145,23 @@ function bindEvents() {
         }
     });
 }
+
+function toTimeString(timer) {
+    // var hours = parseInt(timer/3600,10);
+    var minutes = parseInt(Math.floor(timer/60),10);
+    var seconds = parseInt(timer % 60, 10);
+
+    // hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    return  minutes + ":"  + seconds; 
+}
+
 function generateSumamryView() {
     var quizContainer = $(".container #quizContainer");
     var correctResponse = "";
     var incorrectResponse = "";
+    var questionPerTime = "";
     if (rightQs.length > 0) {
         correctResponse += "<ul class='list-inline'>";
         for (var i = 0; i < rightQs.length; i++) {
@@ -165,16 +179,31 @@ function generateSumamryView() {
         incorrectResponse += "</ul>";
     }
     else { incorrectResponse = "None"; }
+
+    questionPerTime = "<ul class='list-inline'>";
+    var allQuestion = $(".questionItem");
+    var totalTimeTaken = 0;
+    for(var i = 0; i < allQuestion.length; i++){
+        questionPerTime += "<li class='list-inline-item mr-2'><a href='#' onclick='showQuestion(" + i + ")'>Q" + (i+1) +" "+toTimeString(timeTaken[i]) + "</a></li>";
+        totalTimeTaken+= timeTaken[i];
+    }
+    questionPerTime += "</ul>";
+    
     var html = "<div class='col-md-4'><div id='summary' class='jumbotron'><h3 class='totalscore text-center'>Total Score: " + totalQuizScore +
-        "</h3><div id='questionresult' class='--margintop16'><fieldset id='correctresponse' class='form-group --marginbottom8'><legend>Correct responses</legend>" + correctResponse +
+        "</h4><div id='questionresult' class='--margintop16'><fieldset id='correctresponse' class='form-group --marginbottom8'><legend>Correct responses</legend>" + correctResponse +
         "</fieldset><fieldset id='incorrectresponse' class='form-group'><h4>Incorrect responses</h4>" + incorrectResponse + "</fieldset></div></div></div >";
+    var html_analysis = "<div class='col-md-4'><div id='summary' class='jumbotron'><h3 class='totalscore text-center'>Total Time: " + toTimeString(totalTimeTaken) + "</h3><h4  class='--margintop16'>  Average Time " + toTimeString(totalTimeTaken/allQuestion.length)+
+        "</h3><div id='questionresult' class='--margintop16'><fieldset id='correctresponse' class='form-group --marginbottom8'><legend>Question-Wise</legend>" + questionPerTime +
+        "</div></div></div >";
     quizContainer.removeClass("col-md-12");
     quizContainer.addClass("col-md-8");
     quizContainer.parent().append(html);
+    quizContainer.parent().append(html_analysis);
     $("#showAnswerBtn").removeClass("hide");
     $("#submitQuiz").addClass("hide");
     quizSummaryGenerated = true;
 }
+
 function findRightWrongQs() {
     $(".questionItem").each(function (index) {
         var question = $(this);
@@ -365,6 +394,8 @@ function getPrevious() {
 
 // duration: in seconds
 function startTimer(duration, display) {
+    // reset time taken array
+    timeTaken = Array($(".questionItem").length).fill(0);
     var timer = duration, hours, minutes, seconds;
     interval = setInterval(function () {
         hours = parseInt(timer/3600,10)
@@ -376,7 +407,7 @@ function startTimer(duration, display) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = hours + ":" + minutes + ":" + seconds;
-
+        timeTaken[currentIndex]++;
         if (--timer < 0) {
             alert('Time is up');
             clearInterval(interval);
