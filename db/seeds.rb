@@ -30,16 +30,13 @@ question_banks = [
 "category"=>"Algorithms", "question"=>"Consider the collection of all undirected graphs with 10 nodes and 6 edges. Let M and m, respectively, be the maximum and minimum \n\t\tnumber of connected components in any graph in the collection. If a graph has no selfloops and there is at most one edge between any pair of nodes, which of the following is true? ", "option1"=>"M = 10, m = 10", "option2"=>"M = 10, m = 1", "option3"=>"M = 7, m = 4", "option4"=>"M = 6, m = 4", "option5"=>"M = 6, m = 3", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
-"category"=>"Operating Systems", "question"=>"Which of the following statements about a remote procedure call is true? ", "option1"=>"It is used to call procedures with addresses that are farther than 2^16 bytes away. ", "option2"=>"It cannot return a value. ", "option3"=>"TIt cannot pass parameters by reference. ", "option4"=>"It cannot call procedures implemented in a different language. ", "option5"=>"It is used to call procedures at an outer nesting level. ", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
+"category"=>"Operating Systems", "question"=>"Which of the following statements about a remote procedure call is true? ", "option1"=>"It is used to call procedures with addresses that are farther than 2^16 bytes away. ", "option2"=>"It cannot return a value. ", "option3"=>"It cannot pass parameters by reference. ", "option4"=>"It cannot call procedures implemented in a different language. ", "option5"=>"It is used to call procedures at an outer nesting level. ", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
 "category"=>"Software", "question"=>"Which of the following is NOT a property of bitmap graphics? ", "option1"=>"Fast hardware exists to move blocks of pixels efficiently. ", "option2"=>"Realistic lighting and shading can be done. ", "option3"=>"All line segments can be displayed as straight.", "option4"=>"Polygons can be filled with solid colors and textures. ", "option5"=>"The complexity of the image representation is independent of the image. ", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
 "category"=>"Operating Systems", "question"=>"Which of the following is NOT a reasonable justification for choosing to busy-wait on an asynchronous event? ", "option1"=>"The wait is expected to be short. ", "option2"=>"A busy-wait loop is easier to code than an interrupt handler. ", "option3"=>"There is no other work for the processor to do. ", "option4"=>"The task must meet some hard real-time deadlines. ", "option5"=>"The program executes on a time-sharing system. ", "answer"=>5, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
-},
-{
-"category"=>"Software", "question"=>"Which of the following characteristics of a programming language is best specified using a context-free grammar?", "option1"=>"Identifier length ", "option2"=>"Maximum level of nesting ", "option3"=>"Operator precedence ", "option4"=>"Type compatibility ", "option5"=>"Type conversion", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
 "category"=>"Operating Systems", "question"=>"A privileged instruction may be executed only while the hardware is in kernel mode. Which of the following is LEAST likely to be a privileged instruction? ", "option1"=>"An instruction that changes the value of the program counter ", "option2"=>"An instruction that sends output to a printer ", "option3"=>"An instruction that modifies a memory management register ", "option4"=>"An instruction that halts the CPU ", "option5"=>"An instruction that resets the computer’s time-of-day clock ", "answer"=>1, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
@@ -66,7 +63,7 @@ question_banks = [
 "category"=>"Algorithms", "question"=>"Suppose that a certain software product has a mean time between failures of 10,000 hours and has a mean time\n\t\tto repair of 20 hours. If the product is used by 100 customers, what is its availability?", "option1"=>"80%", "option2"=>"90%", "option3"=>"98%", "option4"=>"99.8%", "option5"=>"100%", "answer"=>4, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
-"category"=>"Software", "question"=>"The object-oriented paradigm includes which of the following properties?\nI. Encapsulation\nII. Inheritance\nIII. Recursion", "option1"=>"I only", "option2"=>"II only", "option3"=>"I and II only", "option4"=>"II and III only", "option5"=>"I, II, and II", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
+"category"=>"Software", "question"=>"The object-oriented paradigm includes which of the following properties?\nI. Encapsulation\nII. Inheritance\nIII. Recursion", "option1"=>"I only", "option2"=>"II only", "option3"=>"I and II only", "option4"=>"II and III only", "option5"=>"I, II, and III", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
 "category"=>"Algorithms", "question"=>"Which of the following algorithms has running time $O(n^2)$ in the worst case but $O(n \\log n)$ on average? ", "option1"=>"Bubblesort", "option2"=>"Mergesort", "option3"=>"Heapsort", "option4"=>"Quicksort", "option5"=>"Tournament sort", "answer"=>4, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
@@ -82,9 +79,6 @@ question_banks = [
 },
 {
 "category"=>"Operating Systems", "question"=>"Which of the following is (are) true about virtual memory systems that use pages?\nI. The virtual address space can be larger than the amount of physical memory.\nII. Programs must be resident in main memory throughout their execution.\nIII. Pages correspond to semantic characteristics of the program.", "option1"=>"I only", "option2"=>"II only", "option3"=>"I and II", "option4"=>"I and III", "option5"=>"II and III", "answer"=>1, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
-},
-{
-"category"=>"Operating Systems", "question"=>"One approach to handling fuzzy logic data might be to design a computer using ternary (base-3) logic so that\n\t\tdata could be stored as “true,” “false,” and “unknown.” If each ternary logic element is called a flit, how many\n\t\tflits are required to represent at least 256 different values?", "option1"=>"4", "option2"=>"5", "option3"=>"6", "option4"=>"7", "option5"=>"8", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
 "category"=>"Algorithms", "question"=>" Hash tables can contribute to an efficient average-case solution for all of the problems described below EXCEPT: ", "option1"=>"Counting distinct values: Given a set of n keys, determine the number of distinct key values.", "option2"=>"Dynamic dictionary: Support the operations of insert, delete, and search in a dictionary.", "option3"=>"Range search: Given values a and b, find all the records whose key value is in the range [a b]", "option4"=>"Symbol table lookup: Given a program identifier, find its type and address. ", "option5"=>"Finding intersections: Given two sets of keys, find all key values in common to both sets.", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
@@ -141,7 +135,7 @@ question_banks = [
 "category"=>"Algorithms", "question"=>"An Euler circuit of an undirected graph is a circuit in which each edge of the graph appears exactly once. Which of the following\n\t\tundirected graphs must have an Euler circuit?\nI. A complete graph with 12 vertices\nII. A complete graph with 13 vertices\nIII. A tree with 13 vertices", "option1"=>"I only", "option2"=>"II onl`", "option3"=>"III only", "option4"=>"I and II", "option5"=>"I and III", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
-"category"=>"Algorithms", "question"=>"Consider the following possible data structures for a set of n distinct integers.\nI. A min-heap\nII. An array of length n sorted in increasing order\nII. A balanced binary search tree\nFor which of these data structures is the number of steps needed to find and remove the 7th largest element O (n log n) in the worst case?", "option1"=>"I onl", "option2"=>"II only", "option3"=>"I and II", "option4"=>"I and III", "option5"=>"II and III", "answer"=>5, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
+"category"=>"Algorithms", "question"=>"Consider the following possible data structures for a set of n distinct integers.\nI. A min-heap\nII. An array of length n sorted in increasing order\nII. A balanced binary search tree\nFor which of these data structures is the number of steps needed to find and remove the 7th largest element O (n log n) in the worst case?", "option1"=>"I only", "option2"=>"II only", "option3"=>"I and II", "option4"=>"I and III", "option5"=>"II and III", "answer"=>5, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
 "category"=>"Software", "question"=>"Which of the following characteristics of a programming language is best specified using a context-free grammar?", "option1"=>"Identifier length", "option2"=>"Maximum level of nesting", "option3"=>"Operator precedence ", "option4"=>"Type compatibility", "option5"=>"Type conversion", "answer"=>3, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
@@ -636,7 +630,7 @@ question_banks = [
 "category"=>"Math", "question"=>"The infix expression A-(B+C)*(D/E) is equivalent to which of the following postfix expressions?", "option1"=>"ABC+-DE/*", "option2"=>"ABC+DE/*-", "option3"=>"ABC+*DE/-", "option4"=>"ABC+D/*E-", "option5"=>"ABC+DE/-*", "answer"=>2, "reviewStatus"=>"Approved", "creator"=>"aaa@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
-"category"=>"Algorithms", "question"=>"Consider the following equations concerning a stack module that has the operation Push, Pop, Top and IsEmpty. Which of the following equations doesn NOT represent the conventional semantics of a stack?", "option1"=>"IsEmpty(Push(Stack, Elem))=true", "option2"=>"Pop(Push(Stack, Elem))=Stack", "option3"=>"Top(Push(Stack, Elem))=Elem", "option4"=>"IsEmpty(Push(Push(Stack, Elem1), Elem2))=false", "option5"=>"Top(Pop(Push(Push(Stack, Elem1), Elem2)))=Elem1", "answer"=>1, "reviewStatus"=>"Approved", "creator"=>"aaa@gmail.com", "explaination"=>"", "bookmark"=>nil
+"category"=>"Algorithms", "question"=>"Consider the following equations concerning a stack module that has the operation Push, Pop, Top and IsEmpty. Which of the following equations does not represent the conventional semantics of a stack?", "option1"=>"IsEmpty(Push(Stack, Elem))=true", "option2"=>"Pop(Push(Stack, Elem))=Stack", "option3"=>"Top(Push(Stack, Elem))=Elem", "option4"=>"IsEmpty(Push(Push(Stack, Elem1), Elem2))=false", "option5"=>"Top(Pop(Push(Push(Stack, Elem1), Elem2)))=Elem1", "answer"=>1, "reviewStatus"=>"Approved", "creator"=>"aaa@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
 "category"=>"Computer Architecture", "question"=>"Which of the following pairs of 8-bit, two's-complement numbers will result in overflow when the members of the pairs are added?", "option1"=>"11111111,00000001", "option2"=>"00000001,10000000", "option3"=>"11111111,10000001", "option4"=>"10000001,10101010", "option5"=>"00111111,00111111", "answer"=>4, "reviewStatus"=>"Approved", "creator"=>"aaa@gmail.com", "explaination"=>"", "bookmark"=>nil
@@ -702,10 +696,10 @@ question_banks = [
 "category"=>"Math", "question"=>"The infix expression A-(B+C)*(D/E) is equivalent to which of the following postfix expressions?", "option1"=>"ABC+-DE/*", "option2"=>"ABC+DE/*-", "option3"=>"ABC+*DE/-", "option4"=>"ABC+D/*E-", "option5"=>"ABC+DE/-*", "answer"=>2, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
-"category"=>"Algorithms", "question"=>"Consider the following equations concerning a stack module that has the operation Push, Pop, Top and IsEmpty. Which of the following equations doesn NOT represent the conventional semantics of a stack?", "option1"=>"IsEmpty(Push(Stack, Elem))=true", "option2"=>"Pop(Push(Stack, Elem))=Stack", "option3"=>"Top(Push(Stack, Elem))=Elem", "option4"=>"IsEmpty(Push(Push(Stack, Elem1), Elem2))=false", "option5"=>"Top(Pop(Push(Push(Stack, Elem1), Elem2)))=Elem1", "answer"=>1, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
+"category"=>"Algorithms", "question"=>"Consider the following equations concerning a stack module that has the operation Push, Pop, Top and IsEmpty. Which of the following equations does not represent the conventional semantics of a stack?", "option1"=>"IsEmpty(Push(Stack, Elem))=true", "option2"=>"Pop(Push(Stack, Elem))=Stack", "option3"=>"Top(Push(Stack, Elem))=Elem", "option4"=>"IsEmpty(Push(Push(Stack, Elem1), Elem2))=false", "option5"=>"Top(Pop(Push(Push(Stack, Elem1), Elem2)))=Elem1", "answer"=>1, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
-"category"=>"Algorithms", "question"=>"Which of the following pairs of 8-bit, two's-complement numbers will result in overflow when the members of the pais added?", "option1"=>"11111111,00000001", "option2"=>"00000001,10000000", "option3"=>"11111111,10000001", "option4"=>"10000001,10101010", "option5"=>"00111111,00111111", "answer"=>4, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
+"category"=>"Algorithms", "question"=>"Which of the following pairs of 8-bit, two's-complement numbers will result in overflow when the members of the pairs added?", "option1"=>"11111111,00000001", "option2"=>"00000001,10000000", "option3"=>"11111111,10000001", "option4"=>"10000001,10101010", "option5"=>"00111111,00111111", "answer"=>4, "reviewStatus"=>"Approved", "creator"=>nil, "explaination"=>nil, "bookmark"=>nil
 },
 {
 "category"=>"Algorithms", "question"=>"v1574202600/mnaeyjwjoqs2wakdduu3.png", "option1"=>"$O(\\log n)$", "option2"=>"$O(n)$", "option3"=>"$O(n \\log n)$", "option4"=>"$O(n^2)$", "option5"=>"$O(n^3)$", "answer"=>5, "reviewStatus"=>"Approved", "creator"=>"justintteng@gmail.com", "explaination"=>"", "bookmark"=>nil
@@ -736,9 +730,6 @@ question_banks = [
 },
 {
 "category"=>"Programming", "question"=>"v1574209378/x1lrwfkhydqvai5ffsjf.png", "option1"=>"7", "option2"=>"14", "option3"=>"16", "option4"=>"24", "option5"=>"30", "answer"=>4, "reviewStatus"=>"Approved", "creator"=>"justintteng@gmail.com", "explaination"=>"", "bookmark"=>nil
-},
-{
-"category"=>"Programming", "question"=>"v1574209465/bilrv0pltrdnaeb5hwct.png", "option1"=>"Linear", "option2"=>"Quadratic", "option3"=>"Cubic", "option4"=>"Logarithmic", "option5"=>"Exponential", "answer"=>5, "reviewStatus"=>"Approved", "creator"=>"justintteng@gmail.com", "explaination"=>"", "bookmark"=>nil
 },
 {
 "category"=>"Programming", "question"=>"v1574209579/jydydkmk4yresaew6wim.png", "option1"=>"Linear", "option2"=>"Quadratic", "option3"=>"Cubic", "option4"=>"Logarithmic", "option5"=>"Exponential", "answer"=>1, "reviewStatus"=>"Approved", "creator"=>"justintteng@gmail.com", "explaination"=>"", "bookmark"=>nil
