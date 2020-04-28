@@ -14,9 +14,11 @@
           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
           displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
         },
-        "HTML-CSS": { fonts: ["TeX"] }
+        "HTML-CSS": { fonts: ["TeX"], linebreaks: { automatic: true, width: "container" }  }
       };
-    %script{:async => "", :src => "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_HTMLorMML", :type => "text/javascript"}
+    %script{:async => "", :src => "https://polyfill.io/v3/polyfill.min.js?features=es6", :type => "text/javascript"}
+    %script{:async => "", :src => "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js", :type => "text/javascript"}
+
       :cdata
     %title Flash Cards: Home
     
@@ -46,7 +48,10 @@
         tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
           displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-        }
+        },
+        "HTML-CSS": {
+        linebreaks: { automatic: true, width: "container" }          
+      }    
       });
     :javascript
       function mathjax() {
