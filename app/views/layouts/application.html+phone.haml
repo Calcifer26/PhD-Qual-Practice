@@ -14,9 +14,11 @@
           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
           displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
         },
-        "HTML-CSS": { fonts: ["TeX"] }
+        "HTML-CSS": { fonts: ["TeX"], linebreaks: { automatic: true, width: "container" }  }
       };
-    %script{:async => "", :src => "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_HTMLorMML", :type => "text/javascript"}
+    %script{:async => "", :src => "https://polyfill.io/v3/polyfill.min.js?features=es6", :type => "text/javascript"}
+    %script{:async => "", :src => "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js", :type => "text/javascript"}
+
       :cdata
     %title Flash Cards: Home
     
@@ -28,7 +30,11 @@
 
     / Latest compiled and minified CSS
     %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", :rel => "stylesheet"}/
-   
+    // %link{:href => "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css", :integrity => "sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq", :crossorigin => "anonymous", :rel => "stylesheet"}/
+
+    %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat&display=swap", :rel => "stylesheet"}/
+    
    
     / Latest compiled JavaScript
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"}
@@ -42,7 +48,10 @@
         tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
           displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-        }
+        },
+        "HTML-CSS": {
+        linebreaks: { automatic: true, width: "container" }          
+      }    
       });
     :javascript
       function mathjax() {
@@ -50,7 +59,7 @@
         MathJax.Hub.Queue(["Reprocess",MathJax.Hub]);
       }
   
-    %nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+    %nav.navbar.navbar-expand-md.bg-light.navbar-light
       %a.navbar-brand{:href => "#"} PhD Flash Cards
       %button.navbar-toggler{"data-target" => ".dual-collapse2", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
@@ -65,10 +74,10 @@
           %li.nav-item
             %a.nav-link{:href => "/selquiz"} Quiz
       .navbar-collapse.collapse.w-100.order-3.dual-collapse2
-        - if logged_in?
+        - if user_signed_in?
           %ul.navbar-nav.ml-auto
             %li.nav-item  
-            - if User.find_by(id: session[:user_id]).reviewStatus == "Approved"   
+            - if current_user.reviewStatus == "Approved"   
               %a.nav-link{:href => "/admin_questions"} Your Questions
               %a.nav-link{:href => "/admin"} Users 
               %li.nav-item
@@ -85,6 +94,15 @@
               %a.nav-link{:href => login_path} Login
           
     %br/
+    .container
+    - if flash[:notice]
+      .alert.alert-danger.alert-dismissible.fade.show{:role=>"alert"}
+        = flash[:notice]
+    - if flash[:success]
+      .alert.alert-success.alert-dismissible.fade.show{:role=>"alert"}
+        = flash[:success]
+    - session[:flash] = nil
+
     = yield
     %br/
     %br/
@@ -94,9 +112,9 @@
     %footer.footer.bg-dark
       .container
         %span.text-muted Last updated by Team TheCompSciCollective;
-        // %span.text-muted Last updated by Team CodeSquad;
+        //%span.text-muted Last updated by Team CodeSquad; 
         /%span.text-muted Created by Team RubyGeeks; Updated by BestestSoftwareTeamEver
         %span.text-muted.float-right
           Source code available at 
-          = link_to "Github", "https://github.com/Justin-Teng/PhD-Qual-Practice.git", target: "_blank"
+          = link_to "Github", "https://github.com/Justin-Teng/PhD-Qual-Practice", target: "_blank"
           /= link_to "Github", "https://github.com/BestestSoftwareTeamEver/PhD-Qual-Practice", target: "_blank"
