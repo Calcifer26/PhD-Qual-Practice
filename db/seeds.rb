@@ -742,6 +742,9 @@ end
 
 users = [
 {
+"name"=>"CSE Admin", "email"=>"csephdqual@gmail.com", "password_digest"=>"$2y$10$7VfPzuxBDtjNHuaxL7AZuOAh2EGkco0wJr1dSqVabqTvw2IfmmO/u", "current_place"=>"0", "is_admin"=>true, "reviewStatus"=>"Approved", "reset_digest"=>nil, "reset_sent_at"=>nil, "last_login_at"=>nil
+},    
+{
 "name"=>"admin@gmail.com", "email"=>"admin@gmail.com", "password_digest"=>"$2a$10$wMFgCH3S3AYGw0yhaw2pF.d9K6jlY3cPkF69zKOK5VlALBS7hcRm.", "current_place"=>"0", "is_admin"=>true, "reviewStatus"=>"Approved", "reset_digest"=>nil, "reset_sent_at"=>nil, "last_login_at"=>nil
 },
 {
