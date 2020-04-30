@@ -2,9 +2,10 @@
 https://cse-phd-qual-practice.herokuapp.com/
 
 ### Default Admin User
+```
 Email: csephdqual@gmail.com
 Password: CsePhdQual123
-
+```
 ## Setup (4 Steps)
 ### (1/4) Git Ready
 ```
