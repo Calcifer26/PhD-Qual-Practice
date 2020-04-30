@@ -1,3 +1,6 @@
+## Heroku Application URL
+https://cse-phd-qual-practice.herokuapp.com/
+
 ## Setup (4 Steps)
 ### (1/4) Git Ready
 ```
