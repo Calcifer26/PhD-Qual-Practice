@@ -7,7 +7,11 @@ class QuestionsController < ApplicationController
     end
     
     def index
-        @user_questions = QuestionBank.where(creator: current_user.email)
+        if(params[:id])
+           @user_questions = [QuestionBank.find(params[:id])]
+        else
+            @user_questions = QuestionBank.where(creator: current_user.email)
+        end
         @categories_all = CategoryBank.all
     end
 
@@ -47,11 +51,11 @@ class QuestionsController < ApplicationController
         end
        
         flash[:success] = "Question was successfully added"
-        if User.find_by(id: session[:user_id]).reviewStatus == "Approved"
+        if current_user.reviewStatus == "Approved"
        	    redirect_to admin_questions_path
-	else
+	    else
             redirect_to questions_path
-	end
+	    end
     end
     
     def edit

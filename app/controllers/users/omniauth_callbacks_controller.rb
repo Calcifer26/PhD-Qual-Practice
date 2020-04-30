@@ -9,6 +9,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       else
         # save the current omniauth info
         @user.save
+        @user.is_admin = false
         @user.skip_confirmation!
         # @user.confirm!
         session["devise.auth_data"] = request.env["omniauth.auth"]
@@ -26,6 +27,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       else
         # save the current omniauth info
         @user.skip_confirmation!
+        @user.is_admin = false
         @user.save
         session["devise.auth_data"] = request.env["omniauth.auth"]
         sign_in_and_redirect @user, :event => :authentication #this will throw if @user is not activated
